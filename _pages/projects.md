@@ -5,7 +5,7 @@ permalink: /projects/
 description: research and software projects in AI-enabled power-system analysis.
 nav: true
 nav_order: 3
-display_categories: [research, software]
+display_categories: [research, software, industry]
 horizontal: false
 ---
 

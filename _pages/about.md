@@ -6,7 +6,7 @@ subtitle: Power Systems & AI | Voltage Stability | Optimization | Resilience
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_jian.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Boston, MA</p>
