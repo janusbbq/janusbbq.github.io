@@ -55,3 +55,37 @@ I hold the Electrical Engineer Professional Title from State Grid Corporation of
 - Python automation and verification for grid studies
 
 Details are on the [projects](/projects/), [publications](/publications/), and [CV](/cv/) pages.
+
+<script type="module" src="{{ '/assets/js/power-grid-hero.js' | relative_url }}"></script>
+
+<div id="site-toast" class="site-toast" role="status" aria-live="polite"></div>
+<script>
+  // The email icon is a plain mailto: link, which does nothing on machines
+  // without a default mail app. Also copy the address and say so.
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('.contact-icons a[href^="mailto:"]');
+    if (!link) return;
+    var address = link.getAttribute("href").replace(/^mailto:/, "");
+    var toast = document.getElementById("site-toast");
+    var show = function (message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(function () {
+        toast.classList.remove("show");
+      }, 3500);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(address).then(
+        function () {
+          show("Email address copied: " + address);
+        },
+        function () {
+          show("Email: " + address);
+        }
+      );
+    } else {
+      show("Email: " + address);
+    }
+  });
+</script>
