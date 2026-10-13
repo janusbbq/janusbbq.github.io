@@ -5,6 +5,7 @@ description: topology-aware assessment of how torrential-rain outages propagate 
 img: assets/img/naps_agvis_impact_zones.jpg
 importance: 3
 category: research
+featured: true
 related_publications: true
 ---
 

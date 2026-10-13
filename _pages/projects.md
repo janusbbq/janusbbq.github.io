@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: graduate research at UT Knoxville and engineering projects from eight years at State Grid.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [research, software, industry]
 horizontal: false
 ---

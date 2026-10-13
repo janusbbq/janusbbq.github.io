@@ -5,6 +5,7 @@ description: urban distribution network planning, distribution automation deploy
 img: assets/img/da_master_station.png
 importance: 5
 category: industry
+featured: true
 ---
 
 **State Grid Zhejiang Hangzhou Fuyang Power Supply Co. · Electronic Information Technician · Dec 2012 – Nov 2018**

@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
 subtitle: MS Electrical Engineering @ UT Knoxville | Power Systems | Substations & Distribution | AI for Grid Analysis
 
@@ -27,65 +27,27 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Jian Han, a graduate student in Electrical Engineering at the University of Tennessee, Knoxville (MS expected December 2027), where I do power-system research with the CURENT Large-scale Testbed (LTB) group. I bring eight years of utility experience at State Grid and a background in computer science (MS, Northeastern University).
+<p class="hero-statement">Eight years building and running the grid at State Grid, now turning that field experience into rigorous, verifiable tools for power-system analysis.</p>
 
-## Utility experience
+<div class="hero-facts">
+  <div><span class="hero-fact-num">8 yrs</span><span class="hero-fact-label">utility experience, State Grid</span></div>
+  <div><span class="hero-fact-num">5</span><span class="hero-fact-label">35–110kV substation projects: installation &amp; commissioning</span></div>
+  <div><span class="hero-fact-num">7,000+</span><span class="hero-fact-label">annual fault work orders analyzed</span></div>
+  <div><span class="hero-fact-num">NAPS 2026</span><span class="hero-fact-label">distribution resilience paper</span></div>
+</div>
 
-From 2010 to 2018 I worked at State Grid Zhejiang Hangzhou Fuyang Power Supply Co., part of State Grid Corporation of China:
+## Featured work
 
-- **Substations (2010–2012).** Installed, tested, and commissioned equipment on three 110kV and two 35kV substation projects. This covered 50MVA transformers, 10kV switchgear, arc-suppression coils, capacitor banks, and SCADA point-to-point tests with dispatch centers. I also supported four 35–110kV projects with bid specifications, material lists, inspections, and as-built handover.
-- **Distribution automation and planning (2012–2018).** Brought automation terminals and RTUs onto fiber (EPON) and wireless networks for remote fault detection and automatic restoration. Assessed the urban distribution network with GIS and fault-analysis tools for long-term planning. I also built an IoT and cloud system that monitors SF6, temperature, humidity, smoke, and oxygen in 10kV switching stations. It cut manual patrols by over 70%.
-- **Reliability evaluation (2018).** Analyzed 7,000+ annual fault work orders. The evaluation showed average fault-repair response time falling from 57 to 36.9 minutes (about 35%) and fault-handling time from 88 to 67.6 minutes (about 23%).
+<div class="projects featured-projects">
+  <div class="row row-cols-1 row-cols-md-2">
+    {% assign featured_projects = site.projects | where: "featured", true | sort: "importance" %}
+    {% for project in featured_projects %}
+      {% include projects.liquid %}
+    {% endfor %}
+  </div>
+</div>
 
-I hold the Electrical Engineer Professional Title from State Grid Corporation of China (2016) and two Chinese patents (2014): an optical fiber composite low-voltage cable (OPLC) cross-connecting cabinet and obstacle-avoidance remote-monitoring data transmission equipment.
-
-## Current research
-
-- **LLM-for-AMS.** Load-growth scenario studies on PJM 5-bus RTED cases with AMS and CLARABEL; Python automation for reproducible studies; analytics for line loading, binding constraints, and LMPs. I am also building verification methods for AI-generated grid analyses.
-- **PV-Curve Agent.** Runs voltage-stability (PV/nose-curve) studies from natural-language requests and reports load margin and nose-point voltage.
-- **Storm prediction and grid-resilience exposure mapping.** Streams DYAMOND GEOS climate simulation data and turns it into next-day storm prediction, DBSCAN hotspot detection, and a grid-impact priority ranking for the Southeast (COSC 526 Data Engineering).
-- **Distribution-system resilience.** Co-author of the NAPS 2026 paper _Topology-Aware Propagation-Based Assessment of Extreme-Weather Impacts on Distribution System Resilience_. I contributed to its technical review and preparation.
-
-## Interests
-
-- Transmission and distribution planning: power flow, load growth, and large-load interconnection
-- Substation engineering, construction, and commissioning
-- Reliability and outage-data analytics
-- Voltage stability and operating limits
-- Python automation and verification for grid studies
-
-Details are on the [projects](/projects/), [publications](/publications/), and [CV](/cv/) pages.
+Now: MS in Electrical Engineering at UT Knoxville (expected Dec 2027), researching AI-assisted grid analysis with CURENT. See all [projects](/projects/), [writing](/blog/), or [about me](/about/).
 
 <script type="module" src="{{ '/assets/js/power-grid-hero.js' | relative_url }}"></script>
-
-<div id="site-toast" class="site-toast" role="status" aria-live="polite"></div>
-<script>
-  // The email icon is a plain mailto: link, which does nothing on machines
-  // without a default mail app. Also copy the address and say so.
-  document.addEventListener("click", function (event) {
-    var link = event.target.closest('.contact-icons a[href^="mailto:"]');
-    if (!link) return;
-    var address = link.getAttribute("href").replace(/^mailto:/, "");
-    var toast = document.getElementById("site-toast");
-    var show = function (message) {
-      toast.textContent = message;
-      toast.classList.add("show");
-      clearTimeout(toast._timer);
-      toast._timer = setTimeout(function () {
-        toast.classList.remove("show");
-      }, 3500);
-    };
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(address).then(
-        function () {
-          show("Email address copied: " + address);
-        },
-        function () {
-          show("Email: " + address);
-        }
-      );
-    } else {
-      show("Email: " + address);
-    }
-  });
-</script>
+<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>

@@ -8,8 +8,8 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 const isDark = () => document.documentElement.getAttribute("data-theme") === "dark";
 
 const PALETTE = {
-  dark: { base: new THREE.Color("#ffb800"), line: new THREE.Color("#ff6b00"), opacity: 0.9, lineOpacity: 0.32 },
-  light: { base: new THREE.Color("#af8650"), line: new THREE.Color("#c99a5b"), opacity: 0.75, lineOpacity: 0.28 },
+  dark: { base: new THREE.Color("#ffb15c"), line: new THREE.Color("#f07a3c"), opacity: 0.9, lineOpacity: 0.32 },
+  light: { base: new THREE.Color("#b5643a"), line: new THREE.Color("#d08a5c"), opacity: 0.75, lineOpacity: 0.28 },
 };
 // Overload heat ramp: yellow (cool) -> orange -> red (hot).
 const HEAT = [new THREE.Color("#ffd23f"), new THREE.Color("#ff6b00"), new THREE.Color("#ff2a1a")];
@@ -286,9 +286,9 @@ function startWaveform() {
   const ctx = canvas.getContext("2d");
 
   const phases = [
-    { shift: 0, dark: "#ff6b00", light: "#b5502b", width: 2 },
-    { shift: (2 * Math.PI) / 3, dark: "#ffb800", light: "#af8650", width: 1.5 },
-    { shift: (4 * Math.PI) / 3, dark: "rgba(245,235,230,0.55)", light: "rgba(52,58,64,0.45)", width: 1.2 },
+    { shift: 0, dark: "#f07a3c", light: "#c2462b", width: 2 },
+    { shift: (2 * Math.PI) / 3, dark: "#ffb15c", light: "#e0912b", width: 1.5 },
+    { shift: (4 * Math.PI) / 3, dark: "rgba(243,231,218,0.5)", light: "rgba(59,47,39,0.4)", width: 1.2 },
   ];
   let transientAt = -10;
   let transientX = 0.5;
@@ -309,7 +309,7 @@ function startWaveform() {
     const amp = h * 0.32;
 
     // Faint oscilloscope grid.
-    ctx.strokeStyle = dark ? "rgba(255,107,0,0.10)" : "rgba(175,134,80,0.16)";
+    ctx.strokeStyle = dark ? "rgba(240,122,60,0.12)" : "rgba(194,70,43,0.12)";
     ctx.lineWidth = 1;
     ctx.beginPath();
     for (let gx = 0; gx <= w; gx += 40) {
