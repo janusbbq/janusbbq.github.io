@@ -3,7 +3,7 @@ layout: page
 title: PMS System Data Interface
 description: data interfaces integrating real-time data, records, and fault logs into a power production management system (2018).
 img: assets/img/pms_data_interface.png
-importance: 4
+importance: 6
 category: industry
 ---
 

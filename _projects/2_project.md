@@ -1,20 +1,15 @@
 ---
 layout: page
-title: PV Curve Agent
-description: interactive voltage stability analysis with PV curve workflows and weak-grid diagnosis.
+title: PV-Curve Agent
+description: AI-based voltage-stability analysis that runs PV/nose-curve studies from natural-language requests.
 img:
 importance: 2
-category: software
-related_publications: true
+category: research
 ---
 
-PV Curve Agent is a research software prototype for voltage stability studies. It is designed around a practical workflow: select a study case, run or review PV curve analysis, identify limiting buses or areas, and explain the stability margin in a form that is useful for power-system engineers.
+**CURENT LTB / The University of Tennessee, Knoxville · 2026**
 
-The project focuses on:
+The PV-Curve Agent lets an engineer ask for a voltage-stability study in plain language and get back a complete PV (nose) curve analysis.
 
-- PV curve interpretation and stability-margin tracking;
-- weak-bus and weak-area diagnosis;
-- structured reporting for planning and operation studies;
-- human-in-the-loop analysis rather than opaque automation.
-
-Related publication entry: {% cite han2026pvcagent %}.
+- Developed and validated a workflow that runs PV/nose-curve studies from natural-language requests. It reports load margin, nose-point voltage, and convergence, and plots the curves.
+- Analyzed how rising load moves buses toward their voltage-collapse limits. This question matters in large-load interconnection studies.

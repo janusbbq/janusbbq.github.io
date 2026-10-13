@@ -1,76 +1,162 @@
 cv:
   name: Jian Han
-  label: Power Systems and AI Researcher
-  email: han.jian2@northeastern.edu
-  location: Boston, MA
+  label: Graduate Student in Electrical Engineering, The University of Tennessee, Knoxville
+  email: jhan33@vols.utk.edu
+  location: Knoxville, TN
   image: ""
-  summary: Researcher focused on AI-enabled power-system analysis, optimization, voltage stability, and grid resilience.
+  summary: >-
+    Graduate Electrical Engineering student at UT Knoxville with eight years at a State Grid utility, spanning 35–110kV substation construction
+    and commissioning, distribution automation, distribution network planning, and reliability performance evaluation. Current research covers
+    power-system simulation automation, transmission analytics, voltage stability, and verification of AI-generated grid analyses.
 
   social_networks:
+    - network: LinkedIn
+      username: janus-han
     - network: GitHub
       username: janusbbq
 
   sections:
-    Research Interests:
-      - name: AI-enabled power-system analysis
-        summary: Large language model agents, automated modeling workflows, and decision-support tools for grid studies.
+    Education:
+      - institution: The University of Tennessee, Knoxville
+        area: Electrical Engineering
+        degree: MS
+        location: Knoxville, TN
+        date: Expected Dec 2027
         highlights:
-          - Power-system automation
-          - Engineering workflow agents
-          - Interpretable analysis tools
+          - "Focus: electric energy systems, power-system analysis, optimization, and control."
+          - "Coursework: Power Systems Analysis, Electric Energy Systems, Optimization Methods, Power System Economics, Deep Learning for Power System Operation and Control, Statistics, Data Engineering."
 
-      - name: Stability, optimization, and resilience
-        summary: Methods for voltage stability assessment, optimization-based analysis, and resilient operation of modern power networks.
+      - institution: Northeastern University
+        area: Computer Science
+        degree: MS
+        start_date: "2023"
+        end_date: "2025"
         highlights:
-          - PV and QV curve analysis
-          - Weak-grid diagnosis
-          - Resilience-oriented planning and operation
+          - "Coursework: Database Management Systems, Algorithms, Software Engineering, Networking, Operating Systems, Object-Oriented Design."
+
+      - institution: The University of Winnipeg
+        area: Accounting
+        degree: BBA
+        location: Winnipeg, Canada
+        start_date: "2019"
+        end_date: "2022"
+
+      - institution: Hangzhou Dianzi University
+        area: Electrical Engineering and Automation
+        degree: B.Eng.
+        location: Hangzhou, China
+        start_date: "2006"
+        end_date: "2010"
+        highlights:
+          - "Relevant coursework: Power System Automation, Power Supply Technology, Motor Control."
 
     Experience:
-      - company: State Grid Corporation of China
-        position: Power Systems Engineering Experience
-        location: China
-        summary: Worked close to practical grid operation and planning problems, motivating research on usable analytical tools for power-system engineers.
+      - company: IpserLab, LLC
+        position: Software Engineer Intern
+        location: Fort Worth, TX
+        start_date: "2025-01"
+        end_date: "2025-05"
         highlights:
-          - Power-system operation and planning context
-          - Grid-analysis workflows
-          - Practical engineering constraints
+          - Developed and debugged backend components with Java, PostgreSQL, RESTful APIs, and Git-based workflows in a cross-functional team.
+          - Worked with designers, engineers, and project managers while maintaining technical documentation.
+
+      - company: State Grid Zhejiang Hangzhou Fuyang Power Supply Co., Ltd. (State Grid Corporation of China)
+        position: Electronic Information Technician, IT & Communications O&M
+        location: Hangzhou, China
+        start_date: "2012-12"
+        end_date: "2018-11"
+        highlights:
+          - "Reliability performance evaluation (2018): analyzed 7,000+ annual fault work orders (7,065 in 2015 vs. 7,580 in 2017) to evaluate the distribution automation system. Using 500-ticket samples, average fault-repair response time fell from 57 to 36.9 minutes (~35%) and average fault-handling time from 88 to 67.6 minutes (~23%)."
+          - "Assessed economic, management, and social benefits, including projected reductions in outage energy loss and line losses; contributed to optimization recommendations for later upgrades."
+          - "Urban distribution network planning and design (2016): assessed Fuyang's urban distribution network with GIS and fault-analysis tools to identify automation upgrade needs; contributed to infrastructure and communication-pathway plans for terminal deployment and substation automation; worked with engineers to map fault-prone areas into long-term automation plans."
+          - "Distribution automation deployment and system integration (2015–2017): handled terminal access and network configuration for automation terminals and RTUs over fiber (EPON) and wireless channels; supported integration with the centralized control system for remote fault detection and automatic restoration; analyzed the communication network structure of switching stations and ring main units."
+          - "PMS system data interface (2018): developed data interfaces integrating real-time data, records, and fault logs."
+          - "Main participant in three process-improvement (QC) projects (2013–2015), including QR-code lifecycle tracking of IT equipment to reduce asset-ledger errors (2015)."
+          - "Network retrofits (2013–2014): migrated a regional network from SDH transport to dark fiber (Layer 2, STP) and upgraded access under four aggregation nodes to Layer 3, ending recurring outages; maintained company network and hardware."
+
+      - company: State Grid Zhejiang Hangzhou Fuyang Power Supply Co., Ltd. (State Grid Corporation of China)
+        position: Substation Maintenance Technician
+        location: Hangzhou, China
+        start_date: "2010-08"
+        end_date: "2012-12"
+        highlights:
+          - "110kV substation construction: Xintong (Sep 2011 – Apr 2012), Chating (Apr – Jun 2012), and Dongzhou Phase II (Sep – Dec 2012). Installed 50MVA main transformers (assembly, oil filling, testing), 10kV switchgear lineups (21 panels per expansion), bus bridges and wall bushings, 110kV CTs, VTs, surge arresters, disconnect switches, post insulators and tubular bus, structures, lightning masts, and grounding; laid and terminated secondary cables from 10kV equipment to the control room."
+          - "Testing and commissioning: tested and commissioned arc-suppression coil and capacitor bank systems; performed secondary circuit checks; completed SCADA point-to-point tests (telemetry, telesignaling, telecontrol) with district and city dispatch centers."
+          - "35kV projects: Jingu substation (20MVA 35/10.5kV, 7 feeders, hybrid static var compensation with harmonic filtering; installed communication and metering devices and the telemetry database on an XJ CBZ-8000 integrated automation system) and Shengcun DC system retrofit (new DC panel, battery bank reconfiguration, feeder load cut-over from both old DC buses)."
+          - "Substation project support (Sep 2010 – Jun 2011): supported four 35–110kV substation and industrial-customer projects with bid technical specifications, equipment and material order lists, contract review and technical briefings, receiving inspections, site coordination, and as-built documents and drawings for handover."
+          - "Maintained and repaired substation equipment; performed HV/MV/LV electrical testing, transformer oil sampling, metering installation, and maintenance records."
 
     Projects:
-      - name: LLM for Automated Modeling and Analysis in Power Systems
-        summary: A research direction exploring how large language model agents can assist with power-system modeling, study setup, result interpretation, and reproducible analysis.
+      - name: "LLM-for-AMS: Power-System Simulation, Transmission Analytics, and Verification"
+        start_date: "2026"
+        end_date: present
+        summary: CURENT LTB / The University of Tennessee, Knoxville
         highlights:
-          - Automated study preparation
-          - Model-aware reasoning
-          - Engineer-facing explanations
+          - "Analyzed PJM 5-bus RTED load-growth scenarios with AMS and CLARABEL; identified the load levels where transmission and generator constraints became binding and forced broader redispatch (max LMP at Bus 2 rose from ~0.25 to 1.16 as Line 4 congestion intensified)."
+          - Built a Python scenario-automation workflow that replaces manual load-variation studies with reproducible runs and structured CSV/JSON outputs for dispatch, line flows, LMPs, and solver status.
+          - Automated analytics for line loading, binding constraints, dispatch changes, LMP ranking, objective cost, and failed runs.
+          - Corrected generator dispatch reporting (Pmin, Pmax, utilization, status) so units are classified consistently as At Pmin, At Pmax, or Marginal.
+          - "Developing verification for AI-generated grid analyses: simulator comparison, independent calculations, engineering-rule checks, and reproducibility tests."
 
-      - name: PV Curve Agent
-        summary: An interactive assistant for voltage stability studies, PV curve interpretation, and weak-bus or weak-area diagnosis.
+      - name: AI-Based PV-Curve Agent for Voltage-Stability Analysis
+        date: 2026
+        summary: CURENT LTB / The University of Tennessee, Knoxville
         highlights:
-          - Voltage stability assessment
-          - PV curve workflow support
-          - Transparent analysis outputs
+          - Developed and validated a workflow that runs PV/nose-curve studies from natural-language requests, reporting load margin, nose-point voltage, convergence, and plots.
+          - Analyzed how rising load moves buses toward voltage-collapse limits, relevant to large-load interconnection studies.
 
     Publications:
-      - title: AI-Enabled Voltage Stability Assessment and Power-System Analysis
+      - title: Topology-Aware Propagation-Based Assessment of Extreme-Weather Impacts on Distribution System Resilience
         authors:
-          - Jian Han
-        publisher: North American Power Symposium (NAPS)
-        releaseDate: "2026"
-        summary: Details to be updated as the manuscript and conference metadata become public.
+          - Junjie Yin
+          - Xinyu Feng
+          - "**Jian Han**"
+          - Fangxing Li
+        journal: 2026 North American Power Symposium (NAPS)
+        date: 2026
+        publisher: 2026 North American Power Symposium (NAPS)
+        summary: "Co-author; contributed to technical review and paper preparation."
 
     Skills:
-      - name: Power Systems
-        level: Advanced
+      - name: Power-System Analysis
+        level: Graduate research
         icon: fa-solid fa-bolt
-        keywords: "Voltage stability, power flow, PV curves, grid resilience, system operation"
+        keywords: "AC/DC power flow, DCOPF, RTED, LMP, transmission congestion, line and generator constraints, voltage stability (PV curves), sensitivity analysis, AMS, CLARABEL"
 
-      - name: Optimization and AI
-        level: Advanced
-        icon: fa-solid fa-brain
-        keywords: "Optimization, machine learning, large language models, engineering agents"
+      - name: Planning & Reliability
+        level: Utility experience
+        icon: fa-solid fa-chart-line
+        keywords: "Load-growth scenario studies, network capacity assessment, GIS-based distribution assessment, fault-prone-area mapping, fault and outage data analysis"
 
-      - name: Research Software
-        level: Advanced
+      - name: Substation & Field
+        level: Utility experience
+        icon: fa-solid fa-plug
+        keywords: "35–110kV substation construction, testing and commissioning, secondary circuit checks, SCADA point-to-point testing, HV/MV/LV testing, bid specifications, as-built drawings, distribution-automation communications"
+
+      - name: Python & Data
+        level: Proficient
+        icon: fa-solid fa-database
+        keywords: "Python, pandas, NumPy, SQL, PostgreSQL, MySQL, scenario automation, numerical validation, CSV/JSON processing"
+
+      - name: Software
+        level: Proficient
         icon: fa-solid fa-code
-        keywords: "Python, reproducible analysis, automation, visualization"
+        keywords: "Java, C, RESTful APIs, Git/GitHub, Jupyter, LangGraph, AutoCAD familiarity"
+
+    Certificates:
+      - name: Electrical Engineer Professional Title
+        issuer: State Grid Corporation of China
+        date: "2016-12"
+        icon: fa-solid fa-certificate
+
+      - name: AWS Academy Cloud Architecting
+        issuer: Amazon Web Services
+        date: "2024-11"
+        icon: fa-brands fa-aws
+
+    Awards:
+      - title: Safety Production Advanced Individual
+        authors:
+          - State Grid Fuyang Power Supply Co.
+        awarder: State Grid Fuyang Power Supply Co.
+        date: 2013

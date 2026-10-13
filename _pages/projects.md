@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: research and software projects in AI-enabled power-system analysis.
+description: graduate research at UT Knoxville and engineering projects from eight years at State Grid.
 nav: true
 nav_order: 3
 display_categories: [research, software, industry]
