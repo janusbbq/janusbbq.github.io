@@ -30,8 +30,6 @@ cv:
       - company: State Grid Corporation of China
         position: Power Systems Engineering Experience
         location: China
-        start_date: ""
-        end_date: ""
         summary: Worked close to practical grid operation and planning problems, motivating research on usable analytical tools for power-system engineers.
         highlights:
           - Power-system operation and planning context
@@ -58,7 +56,7 @@ cv:
         authors:
           - Jian Han
         publisher: North American Power Symposium (NAPS)
-        releaseDate: 2026
+        releaseDate: "2026"
         summary: Details to be updated as the manuscript and conference metadata become public.
 
     Skills:

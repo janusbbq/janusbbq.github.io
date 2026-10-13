@@ -42,7 +42,21 @@ jobs:
             echo "Missing RenderCV config file!"
             exit 1
           fi
-          rendercv render $cv_file --settings $settings
+          # RenderCV rejects fields that only the website CV uses (label, image, summary),
+          # so render from a copy without them. The copy stays in _data/ because the
+          # paths in settings.yaml are relative to the CV file.
+          rendercv_cv="_data/rendercv_cv.yml"
+          python - "$cv_file" "$rendercv_cv" <<'PY'
+          import sys, yaml
+          with open(sys.argv[1]) as f:
+              data = yaml.safe_load(f)
+          for key in ("label", "image", "summary"):
+              data["cv"].pop(key, None)
+          with open(sys.argv[2], "w") as f:
+              yaml.safe_dump(data, f, allow_unicode=True, sort_keys=False)
+          PY
+          rendercv render $rendercv_cv --settings $settings
+          rm $rendercv_cv
           rm assets/rendercv/rendercv_output/*.typ
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v7

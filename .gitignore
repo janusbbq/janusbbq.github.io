@@ -19,3 +19,30 @@ vendor
 # Python bytecode from bin/ helper scripts
 __pycache__/
 *.pyc
+
+# Project-specific
+Reference/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+# Editors
+.vscode/
+*.swp
+*~
+
+# Local agent settings (the tracked .claude/skills symlink is unaffected)
+.claude/settings.local.json
+
+# Secrets and local environment
+.env
+.env.*
+
+# Logs and test reports
+*.log
+playwright-report/
