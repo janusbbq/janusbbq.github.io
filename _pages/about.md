@@ -37,7 +37,7 @@ From 2010 to 2018 I worked at State Grid Zhejiang Hangzhou Fuyang Power Supply C
 - **Distribution automation and planning (2012–2018).** Brought automation terminals and RTUs onto fiber (EPON) and wireless networks for remote fault detection and automatic restoration. Assessed the urban distribution network with GIS and fault-analysis tools for long-term planning.
 - **Reliability evaluation (2018).** Analyzed 7,000+ annual fault work orders. The evaluation showed average fault-repair response time falling from 57 to 36.9 minutes (about 35%) and fault-handling time from 88 to 67.6 minutes (about 23%).
 
-I hold the Electrical Engineer Professional Title from State Grid Corporation of China (2016).
+I hold the Electrical Engineer Professional Title from State Grid Corporation of China (2016) and two Chinese patents (2014): an optical fiber composite low-voltage cable (OPLC) cross-connecting cabinet and obstacle-avoidance remote-monitoring data transmission equipment.
 
 ## Current research
 

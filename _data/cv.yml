@@ -29,26 +29,32 @@ cv:
       - institution: Northeastern University
         area: Computer Science
         degree: MS
-        start_date: "2023"
-        end_date: "2025"
+        start_date: 2023
+        end_date: 2025
         highlights:
           - "Coursework: Database Management Systems, Algorithms, Software Engineering, Networking, Operating Systems, Object-Oriented Design."
 
       - institution: The University of Winnipeg
-        area: Accounting
+        area: Business and Administration – Accounting (4-year)
         degree: BBA
         location: Winnipeg, Canada
-        start_date: "2019"
-        end_date: "2022"
+        start_date: "2019-07"
+        end_date: "2021-12"
+        highlights:
+          - "Dean's Honour List – Student of Distinction (Nov 2020, Jan 2022)."
+          - Member, Golden Key International Honour Society.
+          - "Projects: accounting workshop with Microsoft Power BI, accounting master budget, entrepreneurship business plan."
 
       - institution: Hangzhou Dianzi University
         area: Electrical Engineering and Automation
         degree: B.Eng.
         location: Hangzhou, China
-        start_date: "2006"
-        end_date: "2010"
+        start_date: "2006-09"
+        end_date: "2010-06"
         highlights:
+          - Provincial Excellent Graduate (May 2010).
           - "Relevant coursework: Power System Automation, Power Supply Technology, Motor Control."
+          - "Design project: A Design for Reactive Power Compensation of a Power System (2009)."
 
     Experience:
       - company: IpserLab, LLC
@@ -88,7 +94,7 @@ cv:
 
     Projects:
       - name: "LLM-for-AMS: Power-System Simulation, Transmission Analytics, and Verification"
-        start_date: "2026"
+        start_date: 2026
         end_date: present
         summary: CURENT LTB / The University of Tennessee, Knoxville
         highlights:
@@ -154,9 +160,31 @@ cv:
         date: "2024-11"
         icon: fa-brands fa-aws
 
+    Patents:
+      - bullet: "An Optical Fiber Composite Low-voltage Cable (OPLC) Cross Connecting Cabinet. China, 2014. Patent No. ZL 2014 2 0634381.4."
+      - bullet: "An Obstacle Avoidance Remote Monitoring Data Transmission Equipment. China, 2014. Patent No. ZL 2014 2 0733874.3."
+
     Awards:
+      - title: Dean's Honour List – Student of Distinction
+        authors:
+          - The University of Winnipeg
+        awarder: The University of Winnipeg
+        date: "2022-01"
+
+      - title: Dean's Honour List – Student of Distinction
+        authors:
+          - The University of Winnipeg
+        awarder: The University of Winnipeg
+        date: "2020-11"
+
       - title: Safety Production Advanced Individual
         authors:
           - State Grid Fuyang Power Supply Co.
         awarder: State Grid Fuyang Power Supply Co.
         date: 2013
+
+      - title: Provincial Excellent Graduate
+        authors:
+          - Hangzhou Dianzi University
+        awarder: Hangzhou Dianzi University
+        date: "2010-05"
