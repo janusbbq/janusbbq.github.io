@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # replaced by the milestones timeline below
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -46,6 +46,23 @@ latest_posts:
     {% endfor %}
   </div>
 </div>
+
+## Milestones
+
+<ol class="milestones">
+  <li><span class="ms-date">2026</span><span class="ms-text">Co-authored the NAPS 2026 paper on topology-aware assessment of extreme-weather impacts on distribution-system resilience (CURENT, UT Knoxville).</span></li>
+  <li><span class="ms-date">2026</span><span class="ms-text">Research with CURENT LTB: LLM-for-AMS simulation automation and the PV-Curve Agent for voltage stability.</span></li>
+  <li><span class="ms-date">2026</span><span class="ms-text">Storm prediction and grid-resilience exposure mapping from DYAMOND GEOS climate data (COSC 526).</span></li>
+  <li><span class="ms-date">2025</span><span class="ms-text">MS in Computer Science, Northeastern University; Software Engineer Intern at IpserLab (Jan – May).</span></li>
+  <li><span class="ms-date">2024</span><span class="ms-text">AWS Academy Cloud Architecting certification.</span></li>
+  <li><span class="ms-date">2021</span><span class="ms-text">BBA in Accounting, The University of Winnipeg; Dean's Honour List (2020, 2022).</span></li>
+  <li><span class="ms-date">2018</span><span class="ms-text">Evaluated Fuyang's distribution automation from 7,000+ annual fault work orders: fault-repair response time down about 35%.</span></li>
+  <li><span class="ms-date">2016</span><span class="ms-text">Electrical Engineer Professional Title, State Grid; GIS-based urban distribution network planning.</span></li>
+  <li><span class="ms-date">2015</span><span class="ms-text">IoT environmental monitoring for 10kV switching stations, cutting manual patrols by over 70%.</span></li>
+  <li><span class="ms-date">2014</span><span class="ms-text">Two China patents: an OPLC cross-connecting cabinet and remote-monitoring data transmission equipment.</span></li>
+  <li><span class="ms-date">2011 – 12</span><span class="ms-text">Built and commissioned 110kV substations: Xintong, Chating, and Dongzhou Phase II.</span></li>
+  <li><span class="ms-date">2010</span><span class="ms-text">B.Eng. in Electrical Engineering and Automation, Hangzhou Dianzi University (Provincial Excellent Graduate); joined State Grid Fuyang.</span></li>
+</ol>
 
 Now: MS in Electrical Engineering at UT Knoxville (expected Dec 2027), researching AI-assisted grid analysis with CURENT. See all [projects](/projects/), [writing](/blog/), or [about me](/about/).
 
