@@ -1,0 +1,394 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{site.max_width | default: "930px"}}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/*******************************************************************************
+ * Site overrides for janusbbq.github.io
+ *
+ * Everything above this block is a verbatim copy of al_folio_core's
+ * assets/css/main.scss (v1.0.15); keep it in sync on gem upgrades.
+ * Below: warm brass palette and a power-system visual style (graph-paper
+ * background, energized-bus accents, single-line-diagram details).
+ ******************************************************************************/
+
+:root {
+  --global-bg-color: #f8f5ec;
+  --global-card-bg-color: #fffcf7;
+  --global-text-color: #343a40;
+  --global-text-color-light: #6f6a60;
+  --global-theme-color: #af8650;
+  --global-hover-color: #8c6a3c;
+  --global-hover-text-color: #fffcf7;
+  --global-divider-color: #e3d8c8;
+  --global-code-bg-color: #f1eadc;
+  --global-highlight-color: #b5502b;
+  --global-footer-bg-color: #23272b;
+  --global-footer-text-color: #cfc6b6;
+  --global-footer-link-color: #e2c08d;
+  --global-newsletter-bg-color: #fffcf7;
+
+  // Site-only tokens
+  --site-grid-line: rgba(175, 134, 80, 0.07);
+  --site-grid-major: rgba(175, 134, 80, 0.12);
+  --site-bus-gradient: linear-gradient(90deg, #af8650 0%, #d9b67c 45%, #af8650 100%);
+  --site-node-color: #af8650;
+  --site-shadow: 0 1px 2px rgba(52, 58, 64, 0.06), 0 6px 18px rgba(120, 92, 52, 0.08);
+  --site-shadow-hover: 0 2px 4px rgba(52, 58, 64, 0.08), 0 12px 28px rgba(120, 92, 52, 0.16);
+  --site-font-sans: "IBM Plex Sans", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+// Dark mode: a "control room" palette with the same brass accent.
+html[data-theme="dark"] {
+  --global-bg-color: #11161c;
+  --global-card-bg-color: #171e26;
+  --global-text-color: #e6e0d4;
+  --global-text-color-light: #9aa3ad;
+  --global-theme-color: #d9ae6c;
+  --global-hover-color: #ecc78d;
+  --global-hover-text-color: #11161c;
+  --global-divider-color: #29333f;
+  --global-code-bg-color: #1d2630;
+  --global-highlight-color: #e07a4f;
+  --global-footer-bg-color: #0c1015;
+  --global-footer-text-color: #9aa3ad;
+  --global-footer-link-color: #d9ae6c;
+  --global-newsletter-bg-color: #171e26;
+
+  --site-grid-line: rgba(120, 170, 190, 0.05);
+  --site-grid-major: rgba(120, 170, 190, 0.09);
+  --site-bus-gradient: linear-gradient(90deg, #d9ae6c 0%, #f0d29b 45%, #4fb3bf 100%);
+  --site-node-color: #4fb3bf;
+  --site-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.25);
+  --site-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.35), 0 14px 30px rgba(79, 179, 191, 0.12);
+}
+
+/* Base ---------------------------------------------------------------------- */
+
+body {
+  font-family: var(--site-font-sans);
+  background-color: var(--global-bg-color);
+  // Engineering graph paper: 24px minor grid, 120px major grid.
+  background-image:
+    linear-gradient(var(--site-grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--site-grid-major) 1px, transparent 1px),
+    linear-gradient(var(--site-grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--site-grid-line) 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px,
+    24px 24px,
+    24px 24px;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+  font-family: var(--site-font-sans);
+  letter-spacing: -0.01em;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--site-font-mono);
+}
+
+a {
+  transition: color 0.15s ease;
+}
+
+::selection {
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+}
+
+/* Navbar: an energized bus along the bottom edge ---------------------------- */
+
+.navbar {
+  background-color: var(--global-card-bg-color) !important;
+  opacity: 0.97;
+  border-bottom: 0;
+  backdrop-filter: blur(6px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--site-bus-gradient);
+    background-size: 200% 100%;
+    animation: site-current-flow 8s linear infinite;
+  }
+
+  .nav-link {
+    font-family: var(--site-font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-item.active > .nav-link {
+    color: var(--global-theme-color) !important;
+    font-weight: 600;
+  }
+}
+
+@keyframes site-current-flow {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar::after {
+    animation: none;
+  }
+}
+
+/* Page headers ---------------------------------------------------------------- */
+
+.post-header {
+  .post-title {
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+
+  // Homepage subtitle reads like an equipment nameplate.
+  .desc {
+    font-family: var(--site-font-mono);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--global-theme-color);
+    border-left: 3px solid var(--global-theme-color);
+    padding-left: 0.75rem;
+  }
+
+  .post-description {
+    font-family: var(--site-font-mono);
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Section headings in page content: a busbar with a node on its left end.
+// overflow: hidden keeps the rule beside (not under) the floated profile photo.
+.post article h2:not(.card-title):not(.category):not(.bibliography),
+.post .clearfix > h2 {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0.45rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--global-card-bg-color);
+    border: 2px solid var(--site-node-color);
+    box-sizing: content-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 11px;
+    bottom: 3px;
+    width: 64px;
+    height: 3px;
+    background: var(--site-bus-gradient);
+    border-radius: 2px;
+  }
+}
+
+// Category headings on the projects page.
+.projects h2.category,
+h2.category {
+  font-family: var(--site-font-mono);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--global-theme-color) !important;
+  opacity: 1;
+}
+
+/* Profile photo ---------------------------------------------------------------- */
+
+.profile {
+  img {
+    border-radius: 6px;
+    border: 1px solid var(--global-divider-color);
+    padding: 4px;
+    background: var(--global-card-bg-color);
+    box-shadow: var(--site-shadow);
+  }
+
+  .more-info {
+    font-family: var(--site-font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Cards: project tiles light up like an energized feeder on hover ----------- */
+
+.card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--site-shadow);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--site-bus-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 1;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .card-text {
+    color: var(--global-text-color-light);
+  }
+}
+
+.hoverable:hover {
+  box-shadow: var(--site-shadow-hover) !important;
+  transform: translateY(-2px);
+
+  &.card::before {
+    transform: scaleX(1);
+  }
+}
+
+.projects .card-img-top {
+  border-bottom: 1px solid var(--global-divider-color);
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+/* Figures and captions -------------------------------------------------------- */
+
+.caption {
+  font-family: var(--site-font-mono);
+  font-size: 0.78rem;
+  color: var(--global-text-color-light);
+}
+
+figure img.z-depth-1,
+img.z-depth-1 {
+  border: 1px solid var(--global-divider-color);
+}
+
+/* Tables (results, CV) -------------------------------------------------------- */
+
+.post article table {
+  font-variant-numeric: tabular-nums;
+
+  thead th {
+    font-family: var(--site-font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--global-theme-color);
+    border-bottom: 2px solid var(--global-theme-color);
+  }
+
+  td,
+  th {
+    border-color: var(--global-divider-color);
+  }
+}
+
+/* Publications ---------------------------------------------------------------- */
+
+.publications {
+  .abbr abbr {
+    font-family: var(--site-font-mono);
+    letter-spacing: 0.06em;
+    border-radius: 3px;
+  }
+
+  .links a.btn {
+    font-family: var(--site-font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 3px;
+  }
+
+  .preview img {
+    border-radius: 6px;
+    border: 1px solid var(--global-divider-color);
+  }
+}
+
+/* News and footer -------------------------------------------------------------- */
+
+.news th,
+.news .date {
+  font-family: var(--site-font-mono);
+  font-size: 0.8rem;
+  color: var(--global-theme-color);
+}
+
+footer.fixed-bottom,
+footer.sticky-bottom {
+  font-family: var(--site-font-mono);
+  letter-spacing: 0.02em;
+}
