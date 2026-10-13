@@ -43,6 +43,7 @@ I hold the Electrical Engineer Professional Title from State Grid Corporation of
 
 - **LLM-for-AMS.** Load-growth scenario studies on PJM 5-bus RTED cases with AMS and CLARABEL; Python automation for reproducible studies; analytics for line loading, binding constraints, and LMPs. I am also building verification methods for AI-generated grid analyses.
 - **PV-Curve Agent.** Runs voltage-stability (PV/nose-curve) studies from natural-language requests and reports load margin and nose-point voltage.
+- **Storm prediction and grid-resilience exposure mapping.** Streams DYAMOND GEOS climate simulation data and turns it into next-day storm prediction, DBSCAN hotspot detection, and a grid-impact priority ranking for the Southeast (COSC 526 Data Engineering).
 - **Distribution-system resilience.** Co-author of the NAPS 2026 paper _Topology-Aware Propagation-Based Assessment of Extreme-Weather Impacts on Distribution System Resilience_. I contributed to its technical review and preparation.
 
 ## Interests

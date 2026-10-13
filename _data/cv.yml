@@ -112,6 +112,14 @@ cv:
           - Developed and validated a workflow that runs PV/nose-curve studies from natural-language requests, reporting load margin, nose-point voltage, convergence, and plots.
           - Analyzed how rising load moves buses toward voltage-collapse limits, relevant to large-load interconnection studies.
 
+      - name: Storm Prediction and Grid-Resilience Exposure Mapping
+        date: 2026
+        summary: COSC 526 Data Engineering, The University of Tennessee, Knoxville (IEEE SciVis Contest 2026 data)
+        highlights:
+          - Built a pipeline that streams 14 months of hourly DYAMOND GEOS climate simulation data through OpenVisus/NSDF and derives storm features (wind, pressure and temperature anomalies, vertical motion, precipitation proxy).
+          - Detected storm hotspots with DBSCAN; compared persistence, KNN, logistic regression, and random forest for next-day storm prediction. Logistic regression reached F1 0.712 (CSI 0.553, POD 0.863), evaluated with bootstrap CIs and McNemar's test.
+          - Mapped storm exposure to a grid-impact priority ranking of 36 Southeast-oriented regional patches; 24 unit tests lock the design formulas.
+
     Publications:
       - title: Topology-Aware Propagation-Based Assessment of Extreme-Weather Impacts on Distribution System Resilience
         authors:
