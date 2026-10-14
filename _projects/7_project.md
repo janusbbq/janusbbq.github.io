@@ -7,7 +7,7 @@ importance: 6
 category: industry
 ---
 
-**State Grid Zhejiang Hangzhou Fuyang Power Supply Co. · Jan – Nov 2015**
+**State Grid Zhejiang Hangzhou Fuyang Power Supply Co. · Electronic Information Technician · Jan – Nov 2015**
 
 _10kV distribution network, IoT, sensors, cloud platform, ARM, RESTful APIs_
 

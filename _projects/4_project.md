@@ -7,6 +7,8 @@ importance: 7
 category: industry
 ---
 
+**State Grid Zhejiang Hangzhou Fuyang Power Supply Co. · Electronic Information Technician · 2018**
+
 In 2018 I developed data interfaces for a power production management system (PMS), integrating real-time operating data, equipment records, and fault logs so that they could be accessed consistently across the system.
 
 <div class="row">

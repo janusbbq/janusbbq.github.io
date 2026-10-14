@@ -27,11 +27,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<p class="hero-statement">Eight years building and running the grid at State Grid, now turning that field experience into rigorous, verifiable tools for power-system analysis.</p>
+<p class="hero-statement">Eight years at State Grid, from substation construction and commissioning to distribution automation, now turning that field experience into rigorous, verifiable tools for power-system analysis.</p>
 
 <div class="hero-facts">
-  <div><span class="hero-fact-num">8 yrs</span><span class="hero-fact-label">utility experience, State Grid</span></div>
-  <div><span class="hero-fact-num">5</span><span class="hero-fact-label">35–110kV substation projects: installation &amp; commissioning</span></div>
+  <div><span class="hero-fact-num">8 yrs</span><span class="hero-fact-label">at State Grid as a substation maintenance and electronic information technician</span></div>
+  <div><span class="hero-fact-num">5</span><span class="hero-fact-label">substation projects (35–110kV): installation &amp; commissioning</span></div>
   <div><span class="hero-fact-num">7,000+</span><span class="hero-fact-label">annual fault work orders analyzed</span></div>
   <div><span class="hero-fact-num">NAPS 2026</span><span class="hero-fact-label">distribution resilience paper</span></div>
 </div>
@@ -57,11 +57,12 @@ latest_posts:
   <li><span class="ms-date">2024</span><span class="ms-text">AWS Academy Cloud Architecting certification.</span></li>
   <li><span class="ms-date">2021</span><span class="ms-text">BBA in Accounting, The University of Winnipeg; Dean's Honour List (2020, 2022).</span></li>
   <li><span class="ms-date">2018</span><span class="ms-text">Evaluated Fuyang's distribution automation from 7,000+ annual fault work orders: fault-repair response time down about 35%.</span></li>
-  <li><span class="ms-date">2016</span><span class="ms-text">Electrical Engineer Professional Title, State Grid; GIS-based urban distribution network planning.</span></li>
+  <li><span class="ms-date">2016</span><span class="ms-text">Awarded the Electrical Engineer professional title (State Grid Corporation of China); GIS-based urban distribution network planning.</span></li>
   <li><span class="ms-date">2015</span><span class="ms-text">IoT environmental monitoring for 10kV switching stations, cutting manual patrols by over 70%.</span></li>
   <li><span class="ms-date">2014</span><span class="ms-text">Two China patents: an OPLC cross-connecting cabinet and remote-monitoring data transmission equipment.</span></li>
+  <li><span class="ms-date">2012</span><span class="ms-text">Moved to Electronic Information Technician (IT &amp; communications O&amp;M), working on distribution automation.</span></li>
   <li><span class="ms-date">2011 – 12</span><span class="ms-text">Built and commissioned 110kV substations: Xintong, Chating, and Dongzhou Phase II.</span></li>
-  <li><span class="ms-date">2010</span><span class="ms-text">B.Eng. in Electrical Engineering and Automation, Hangzhou Dianzi University (Provincial Excellent Graduate); joined State Grid Fuyang.</span></li>
+  <li><span class="ms-date">2010</span><span class="ms-text">B.Eng. in Electrical Engineering and Automation, Hangzhou Dianzi University (Provincial Excellent Graduate); joined State Grid Fuyang as a Substation Maintenance Technician.</span></li>
 </ol>
 
 Now: MS in Electrical Engineering at UT Knoxville (expected Dec 2027), researching AI-assisted grid analysis with CURENT. See all [projects](/projects/), [writing](/blog/), or [about me](/about/).
